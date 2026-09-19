@@ -1,226 +1,229 @@
-/* ==============================
+/* ================================
    GENERAL PAGE STYLING
-   ============================== */
+================================ */
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f6f8;
-    color: #333;
+    background-color: #f4f7fb;
+    color: #263238;
+    font-family: "Roboto", sans-serif;
     line-height: 1.6;
+    padding: 30px 20px;
 }
 
 
-/* ==============================
-   HEADER
-   ============================== */
+/* ================================
+   PAGE HEADING CARD
+================================ */
 
-header {
-    background-color: #1f4e5f;
+.heading-card {
+    max-width: 1000px;
+    margin: 0 auto 25px;
+    padding: 35px 30px;
+    background-color: #1e3a5f;
     color: white;
-    padding: 25px;
+    border: 1px solid #16304f;
+    border-radius: 12px;
+    text-align: center;
 }
 
-.heading-container {
-    display: flex;
-    align-items: center;
+.heading-card h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.heading-card p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+
+/* ================================
+   CARD STYLING
+================================ */
+
+.card {
+    max-width: 1000px;
+    margin: 0 auto 25px;
+    padding: 30px;
+    background-color: #ffffff;
+    border: 1px solid #d9e2ec;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(30, 58, 95, 0.08);
+}
+
+.card h2 {
+    font-family: "Poppins", sans-serif;
+    color: #1e3a5f;
+    font-size: 24px;
+    margin-bottom: 22px;
+    border-left: 5px solid #2e7d32;
+    padding-left: 12px;
+}
+
+
+/* ================================
+   FORM STYLING
+================================ */
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    max-width: 1000px;
-    margin: auto;
 }
 
-.heading-container img {
-    background-color: white;
-    border-radius: 10px;
-    padding: 5px;
-}
-
-header h1 {
-    margin: 0;
-}
-
-header p {
-    margin: 5px 0 0;
-}
-
-
-/* ==============================
-   MAIN CONTENT
-   ============================== */
-
-main {
-    width: 90%;
-    max-width: 1000px;
-    margin: 30px auto;
-}
-
-section {
-    background-color: white;
-    padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-
-h2 {
-    color: #1f4e5f;
-    margin-top: 0;
-}
-
-
-/* ==============================
-   ADD EXPENSE FORM
-   ============================== */
-
-.add-expense-section form {
+.form-group {
     display: flex;
     flex-direction: column;
-    gap: 8px;
 }
 
-.add-expense-section label {
-    font-weight: bold;
-    margin-top: 10px;
+.form-group label {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: #37474f;
+    margin-bottom: 7px;
 }
 
-.add-expense-section input,
-.add-expense-section select {
+input,
+select {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+    padding: 12px 14px;
+    border: 1px solid #b8c4d0;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #263238;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s ease;
 }
 
-
-/* Advanced Selector 1:
-   Negation pseudo-class
-*/
-input:not([type="submit"]) {
-    background-color: #fafafa;
-}
-
-
-/* Advanced Selector 2:
-   Focus pseudo-class
-*/
 input:focus,
 select:focus {
-    outline: none;
-    border: 2px solid #1f4e5f;
-    background-color: white;
+    border-color: #2e7d32;
+}
+
+input::placeholder {
+    color: #8a99a8;
 }
 
 
-/* Button */
+/* ================================
+   BUTTON STYLING
+================================ */
 
 button {
-    margin-top: 15px;
-    padding: 12px 20px;
+    grid-column: 1 / -1;
+    padding: 13px 20px;
     border: none;
-    border-radius: 5px;
-    background-color: #1f4e5f;
+    border-radius: 8px;
+    background-color: #2e7d32;
     color: white;
-    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
     cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
 button:hover {
-    background-color: #163b48;
+    background-color: #256628;
 }
 
 
-/* ==============================
+/* ================================
    EXPENSE TABLE
-   ============================== */
+================================ */
 
-.expenses-section table {
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
     width: 100%;
     border-collapse: collapse;
-}
-
-
-/* Advanced Selector 3:
-   Descendant selector
-*/
-.expenses-section td {
-    padding: 12px;
-    border: 1px solid #ddd;
-}
-
-
-/* Table headers */
-
-.expenses-section th {
-    padding: 12px;
-    border: 1px solid #ddd;
-    background-color: #1f4e5f;
-    color: white;
-    text-align: left;
-}
-
-
-/* Advanced Selector 4:
-   Position pseudo-class
-   Alternating row colors
-*/
-.expenses-section tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-
-/* Table row hover */
-
-.expenses-section tbody tr:hover {
-    background-color: #dceff4;
-    cursor: pointer;
-}
-
-
-/* ==============================
-   DETAILS / SUMMARY
-   ============================== */
-
-details {
-    background-color: #f5f5f5;
-    padding: 15px;
-    border-radius: 5px;
-}
-
-summary {
-    font-weight: bold;
-    cursor: pointer;
-    color: #1f4e5f;
-}
-
-
-/* ==============================
-   MULTIMEDIA
-   ============================== */
-
-.multimedia-section {
-    text-align: center;
-}
-
-.multimedia-section iframe {
-    max-width: 100%;
+    border: 1px solid #d9e2ec;
     border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #1e3a5f;
+    color: white;
+}
+
+th {
+    padding: 14px 16px;
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid #16304f;
+}
+
+td {
+    padding: 14px 16px;
+    border: 1px solid #d9e2ec;
+    font-size: 15px;
 }
 
 
-/* ==============================
-   FOOTER
-   ============================== */
+/* Alternating row colors */
 
-footer {
-    background-color: #1f4e5f;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 30px;
+tbody tr:nth-child(even) {
+    background-color: #f0f5f9;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+tbody tr:hover {
+    background-color: #e6f1e7;
+}
+
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    .heading-card {
+        padding: 25px 20px;
+    }
+
+    .heading-card h1 {
+        font-size: 28px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    button {
+        grid-column: auto;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        font-size: 14px;
+    }
 }

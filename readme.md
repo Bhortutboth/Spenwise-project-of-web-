@@ -1,124 +1,74 @@
-# Personal Budget & Expense Tracker
+# Budget Tracker – Week 3 CSS Design Challenge
 
-## Week 2 Project
+## Project Overview
 
-The Personal Budget & Expense Tracker is a simple web project designed to help users record and view their daily expenses.
+This project is a Budget Tracker that allows users to view expenses and enter expense information through a simple form.
 
-This project was continued from Week 1 and upgraded with an expense table, improved form, multimedia content, interactive elements, and advanced CSS selectors.
+For Week 3, I improved the existing Budget Tracker by focusing on CSS design and visual presentation. I did not add new functionality. The main improvements include a consistent color palette, Google Fonts, styled forms and tables, and effective use of the CSS Box Model.
 
-## Technologies Used
+## Files
 
-- HTML5
-- CSS3
+* `index.html` – Contains the structure and content of the Budget Tracker.
+* `style.css` – Contains all the styling, including colors, typography, form styling, table styling, spacing, borders, and responsive design.
+* `README.md` – Explains the project and the design improvements.
 
-## Project Files
+## Design Improvements
 
-### index.html
+### 1. Color Palette
 
-The `index.html` file contains the structure of the Budget Tracker.
+I used a small and consistent color palette throughout the application.
 
-It includes:
+* Dark blue is used for the main heading and table header.
+* Green is used for the main action button and section accents.
+* Light gray and white are used for the page background and cards.
+* Dark gray is used for readable text.
 
-- Main heading and logo
-- Add Expense form
-- Expense category dropdown
-- Expense table
-- Sample expense records
-- Budgeting video
-- How-to-use collapsible section
-- Footer
+This creates a clean and professional appearance.
 
-### style.css
+### 2. Typography
 
-The `style.css` file controls the appearance of the website.
+I used two Google Fonts:
 
-It includes:
+* **Poppins** – Used for headings, labels, and buttons.
+* **Roboto** – Used for body text, form inputs, and table content.
 
-- Page layout
-- Colors
-- Spacing
-- Form styling
-- Table styling
-- Alternating table rows
-- Hover effects
-- Button styling
-- Input focus effects
-- Advanced CSS selectors
-- Responsive multimedia styling
+The combination creates a clear visual hierarchy and improves readability.
 
-## Features Added in Week 2
+### 3. Table and Form Styling
 
-### 1. Expense Table
+The Add Expense form includes:
 
-The project now contains a properly structured HTML table using:
+* Consistent spacing between form fields.
+* Styled input fields and dropdowns.
+* Borders around inputs.
+* Rounded corners.
+* A consistent green button.
+* Focus styling for form inputs.
 
-- `<table>`
-- `<thead>`
-- `<tbody>`
-- `<tr>`
-- `<th>`
-- `<td>`
+The expense table includes:
 
-The table contains five sample expenses.
+* A dark blue table header.
+* Borders around cells.
+* Proper padding.
+* Alternating row colors.
+* Hover styling for rows.
+* Rounded corners.
 
-### 2. Add Expense Form
+### 4. CSS Box Model
 
-The form now contains:
+The CSS Box Model was intentionally used throughout the project.
 
-- Expense name
-- Expense amount
-- Expense category
-- Expense date
-- Add Expense button
+* **Margin** separates the heading, form, and table sections.
+* **Padding** creates space inside cards, form fields, buttons, and table cells.
+* **Borders** define cards, inputs, and table cells.
+* **Border-radius** gives the cards, inputs, buttons, and table a modern appearance.
 
-The category field is a dropdown containing:
+The page heading, Add Expense form, and Expense Table are presented as separate visual cards.
 
-- Food
-- Transport
-- Rent
-- Entertainment
-- Other
+## Responsive Design
 
-### 3. Multimedia
+A media query was added to make the Budget Tracker easier to use on smaller screens. The form changes from two columns to one column on mobile devices, and the table can scroll horizontally when necessary.
 
-A logo image was added using the `<img>` element.
+## Conclusion
 
-A budgeting video was also embedded using an `<iframe>`.
-
-### 4. Interactive Elements
-
-A `<details>` and `<summary>` section was added to explain how the tracker works.
-
-Table rows also change appearance when the mouse moves over them.
-
-The Add Expense button uses `cursor: pointer`.
-
-### 5. Advanced CSS Selectors
-
-The project uses several advanced CSS selectors:
-
-- `.expenses-section td` - descendant selector
-- `input:not([type="submit"])` - negation pseudo-class
-- `input:focus` - focus pseudo-class
-- `.expenses-section tr:nth-child(even)` - position-based pseudo-class
-- `.expenses-section tbody tr:hover` - hover pseudo-class
-
-## Future Development
-
-In future weeks, JavaScript will be added to make the Add Expense button functional.
-
-Future features may include:
-
-- Adding expenses dynamically
-- Calculating total expenses
-- Deleting expenses
-- Editing expenses
-- Budget calculations
-- Data storage
-- Interactive dashboard
-
-## Author
-
-Bor Tut Both
-
-Personal Budget & Expense Tracker - Week 2
+The Week 3 CSS improvements transformed the existing Budget Tracker into a cleaner and more user-friendly application. The design now has consistent colors, improved typography, organized cards, styled forms and tables, and intentional use of the CSS Box Model.
