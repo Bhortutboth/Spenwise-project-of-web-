@@ -1,74 +1,100 @@
-# Budget Tracker – Week 3 CSS Design Challenge
+# Personal Budget & Expense Tracker
 
-## Project Overview
+## Project Description
 
-This project is a Budget Tracker that allows users to view expenses and enter expense information through a simple form.
+The Personal Budget & Expense Tracker is a simple web application designed to help users record and organize their expenses. The project was developed using HTML and CSS.
 
-For Week 3, I improved the existing Budget Tracker by focusing on CSS design and visual presentation. I did not add new functionality. The main improvements include a consistent color palette, Google Fonts, styled forms and tables, and effective use of the CSS Box Model.
+For Week 3, I continued working on my existing Budget Tracker and focused on improving its visual design using CSS. I did not create a new project or add new functionality.
 
-## Files
-
-* `index.html` – Contains the structure and content of the Budget Tracker.
-* `style.css` – Contains all the styling, including colors, typography, form styling, table styling, spacing, borders, and responsive design.
-* `README.md` – Explains the project and the design improvements.
-
-## Design Improvements
+## Week 3 Improvements
 
 ### 1. Color Palette
 
-I used a small and consistent color palette throughout the application.
+I selected a clean and professional blue color palette.
 
-* Dark blue is used for the main heading and table header.
-* Green is used for the main action button and section accents.
-* Light gray and white are used for the page background and cards.
-* Dark gray is used for readable text.
+The colors are used consistently for:
 
-This creates a clean and professional appearance.
+* Page background
+* Headings
+* Buttons
+* Table headers
+* Borders
+* Form elements
+* Other important interface elements
 
 ### 2. Typography
 
-I used two Google Fonts:
+I used Google Fonts to improve the appearance and readability of the application.
 
-* **Poppins** – Used for headings, labels, and buttons.
-* **Roboto** – Used for body text, form inputs, and table content.
+* Poppins is used for headings, labels, buttons, and table headings.
+* Roboto is used for general body text and form content.
 
-The combination creates a clear visual hierarchy and improves readability.
+This creates a clear visual hierarchy throughout the application.
 
-### 3. Table and Form Styling
+### 3. Expense Table Styling
 
-The Add Expense form includes:
+The expense table was improved by adding:
 
-* Consistent spacing between form fields.
-* Styled input fields and dropdowns.
-* Borders around inputs.
-* Rounded corners.
-* A consistent green button.
-* Focus styling for form inputs.
+* Styled table headers
+* Cell padding
+* Borders
+* Alternating row colors
+* Hover effects
+* Consistent typography
+* Rounded corners
+* Proper spacing
 
-The expense table includes:
+These changes make the expense information easier to read.
 
-* A dark blue table header.
-* Borders around cells.
-* Proper padding.
-* Alternating row colors.
-* Hover styling for rows.
-* Rounded corners.
+### 4. Add Expense Form Styling
 
-### 4. CSS Box Model
+The Add Expense form was improved using:
 
-The CSS Box Model was intentionally used throughout the project.
+* Consistent input sizes
+* Padding inside inputs
+* Borders
+* Rounded corners
+* Focus effects
+* Styled labels
+* A professional button design
+* Consistent spacing
 
-* **Margin** separates the heading, form, and table sections.
-* **Padding** creates space inside cards, form fields, buttons, and table cells.
-* **Borders** define cards, inputs, and table cells.
-* **Border-radius** gives the cards, inputs, buttons, and table a modern appearance.
+### 5. CSS Box Model
+
+The CSS Box Model was intentionally used throughout the application.
+
+I used:
+
+* `margin` to separate sections
+* `padding` to create internal spacing
+* `border` to define different areas
+* `border-radius` to create modern rounded corners
 
 The page heading, Add Expense form, and Expense Table are presented as separate visual cards.
 
-## Responsive Design
+### 6. Responsive Design
 
-A media query was added to make the Budget Tracker easier to use on smaller screens. The form changes from two columns to one column on mobile devices, and the table can scroll horizontally when necessary.
+A responsive media query was added so that the Budget Tracker can remain usable on smaller screens such as tablets and mobile devices.
+
+## Technologies Used
+
+* HTML5
+* CSS3
+* Google Fonts
+
+## Project Features
+
+* Budget and expense tracking interface
+* Add Expense form
+* Expense table
+* Styled form controls
+* Professional color palette
+* Custom typography
+* Responsive layout
+* CSS Box Model
+* Table styling
+* Card-based design
 
 ## Conclusion
 
-The Week 3 CSS improvements transformed the existing Budget Tracker into a cleaner and more user-friendly application. The design now has consistent colors, improved typography, organized cards, styled forms and tables, and intentional use of the CSS Box Model.
+This week's work focused on transforming the existing Budget Tracker from a basic HTML interface into a more polished and user-friendly application. The improvements were made using CSS without adding new functionality or creating a new project.
