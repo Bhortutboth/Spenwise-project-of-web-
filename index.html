@@ -1,121 +1,218 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpendWise Dashboard</title>
 
-    <title>Budget Tracker</title>
+```
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+```
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Page Heading Card -->
-    <header class="heading-card">
-        <h1>Budget Tracker</h1>
-        <p>Track your expenses and manage your budget easily.</p>
-    </header>
+```
+<div class="dashboard">
 
-    <!-- Add Expense Form Card -->
-    <section class="card">
-        <h2>Add Expense</h2>
-
-        <form>
-            <div class="form-group">
-                <label for="expense">Expense Name</label>
-                <input
-                    type="text"
-                    id="expense"
-                    name="expense"
-                    placeholder="Enter expense name"
-                >
-            </div>
-
-            <div class="form-group">
-                <label for="amount">Amount</label>
-                <input
-                    type="number"
-                    id="amount"
-                    name="amount"
-                    placeholder="Enter amount"
-                >
-            </div>
-
-            <div class="form-group">
-                <label for="category">Category</label>
-                <select id="category" name="category">
-                    <option value="">Select category</option>
-                    <option value="food">Food</option>
-                    <option value="transport">Transport</option>
-                    <option value="education">Education</option>
-                    <option value="entertainment">Entertainment</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="date">Date</label>
-                <input type="date" id="date" name="date">
-            </div>
-
-            <button type="submit">Add Expense</button>
-        </form>
-    </section>
-
-    <!-- Expense Table Card -->
-    <section class="card">
-        <h2>Expense Table</h2>
-
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Expense</th>
-                        <th>Amount</th>
-                        <th>Category</th>
-                        <th>Date</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>Lunch</td>
-                        <td>KSh 300</td>
-                        <td>Food</td>
-                        <td>2026-09-15</td>
-                    </tr>
-
-                    <tr>
-                        <td>Bus Fare</td>
-                        <td>KSh 100</td>
-                        <td>Transport</td>
-                        <td>2026-09-16</td>
-                    </tr>
-
-                    <tr>
-                        <td>Internet</td>
-                        <td>KSh 500</td>
-                        <td>Education</td>
-                        <td>2026-09-17</td>
-                    </tr>
-
-                    <tr>
-                        <td>Stationery</td>
-                        <td>KSh 250</td>
-                        <td>Education</td>
-                        <td>2026-09-18</td>
-                    </tr>
-                </tbody>
-            </table>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <span>💰</span>
+            <h2>SpendWise</h2>
         </div>
-    </section>
+
+        <nav class="navigation">
+            <a href="#" class="nav-item active">🏠 <span>Dashboard</span></a>
+            <a href="#" class="nav-item">💳 <span>Transactions</span></a>
+            <a href="#" class="nav-item">📊 <span>Reports</span></a>
+            <a href="#" class="nav-item">🎯 <span>Budgets</span></a>
+            <a href="#" class="nav-item">⚙️ <span>Settings</span></a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <p>Monthly Budget</p>
+            <strong>KES 50,000</strong>
+            <div class="progress">
+                <div class="progress-bar"></div>
+            </div>
+            <small>72% used</small>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <header class="header">
+            <div>
+                <p class="welcome">Welcome back,</p>
+                <h1>Financial Dashboard</h1>
+            </div>
+
+            <div class="header-actions">
+                <button class="notification">🔔</button>
+
+                <div class="profile">
+                    <div class="profile-avatar">BT</div>
+                    <div>
+                        <strong>SpendWise User</strong>
+                        <small>My Account</small>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Summary -->
+        <section class="summary">
+            <div class="summary-item">
+                <span>Total Income</span>
+                <strong>KES 85,000</strong>
+            </div>
+
+            <div class="summary-item">
+                <span>Total Expenses</span>
+                <strong>KES 36,200</strong>
+            </div>
+
+            <div class="summary-item">
+                <span>Remaining Balance</span>
+                <strong>KES 48,800</strong>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="categories">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Monthly spending</p>
+                    <h2>Expense Categories</h2>
+                </div>
+                <span class="date">September 2026</span>
+            </div>
+
+            <div class="card-grid">
+
+                <!-- Food -->
+                <article class="category-card" tabindex="0">
+                    <div class="card-top">
+                        <div class="card-icon">🍔</div>
+                        <span class="percentage">18%</span>
+                    </div>
+
+                    <div class="card-content">
+                        <h3>Food</h3>
+                        <p>Groceries and meals</p>
+                    </div>
+
+                    <div class="card-bottom">
+                        <strong>KES 6,500</strong>
+                        <span>of KES 10,000</span>
+                    </div>
+                </article>
+
+                <!-- Transport -->
+                <article class="category-card" tabindex="0">
+                    <div class="card-top">
+                        <div class="card-icon">🚌</div>
+                        <span class="percentage">12%</span>
+                    </div>
+
+                    <div class="card-content">
+                        <h3>Transport</h3>
+                        <p>Travel and commuting</p>
+                    </div>
+
+                    <div class="card-bottom">
+                        <strong>KES 4,200</strong>
+                        <span>of KES 7,000</span>
+                    </div>
+                </article>
+
+                <!-- Rent -->
+                <article class="category-card" tabindex="0">
+                    <div class="card-top">
+                        <div class="card-icon">🏠</div>
+                        <span class="percentage">35%</span>
+                    </div>
+
+                    <div class="card-content">
+                        <h3>Rent</h3>
+                        <p>Housing expenses</p>
+                    </div>
+
+                    <div class="card-bottom">
+                        <strong>KES 12,000</strong>
+                        <span>of KES 15,000</span>
+                    </div>
+                </article>
+
+                <!-- Entertainment -->
+                <article class="category-card" tabindex="0">
+                    <div class="card-top">
+                        <div class="card-icon">🎬</div>
+                        <span class="percentage">8%</span>
+                    </div>
+
+                    <div class="card-content">
+                        <h3>Entertainment</h3>
+                        <p>Movies and leisure</p>
+                    </div>
+
+                    <div class="card-bottom">
+                        <strong>KES 2,800</strong>
+                        <span>of KES 5,000</span>
+                    </div>
+                </article>
+
+                <!-- Savings -->
+                <article class="category-card" tabindex="0">
+                    <div class="card-top">
+                        <div class="card-icon">💰</div>
+                        <span class="percentage">20%</span>
+                    </div>
+
+                    <div class="card-content">
+                        <h3>Savings</h3>
+                        <p>Monthly savings goal</p>
+                    </div>
+
+                    <div class="card-bottom">
+                        <strong>KES 8,000</strong>
+                        <span>of KES 12,000</span>
+                    </div>
+                </article>
+
+                <!-- Utilities -->
+                <article class="category-card" tabindex="0">
+                    <div class="card-top">
+                        <div class="card-icon">💡</div>
+                        <span class="percentage">7%</span>
+                    </div>
+
+                    <div class="card-content">
+                        <h3>Utilities</h3>
+                        <p>Electricity and internet</p>
+                    </div>
+
+                    <div class="card-bottom">
+                        <strong>KES 2,700</strong>
+                        <span>of KES 5,000</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+</div>
+```
 
 </body>
 </html>

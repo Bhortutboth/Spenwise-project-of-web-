@@ -1,100 +1,114 @@
-# Personal Budget & Expense Tracker
+# SpendWise Dashboard Shell
 
-## Project Description
+## Project Overview
 
-The Personal Budget & Expense Tracker is a simple web application designed to help users record and organize their expenses. The project was developed using HTML and CSS.
+SpendWise is a personal budget and expense tracking dashboard designed to help users view their financial information in a simple and organized way.
 
-For Week 3, I continued working on my existing Budget Tracker and focused on improving its visual design using CSS. I did not create a new project or add new functionality.
+For Week 4, the existing SpendWise project was developed into a responsive dashboard shell using CSS Grid and Flexbox.
 
-## Week 3 Improvements
+## Files
 
-### 1. Color Palette
+### index.html
 
-I selected a clean and professional blue color palette.
+The `index.html` file contains the structure of the dashboard, including:
 
-The colors are used consistently for:
+* Sidebar navigation
+* Dashboard header
+* User profile section
+* Financial summary cards
+* Six expense category cards
+* Food
+* Transport
+* Rent
+* Entertainment
+* Savings
+* Utilities
 
-* Page background
-* Headings
-* Buttons
-* Table headers
-* Borders
-* Form elements
-* Other important interface elements
+The financial information is static because functionality is not required for this week's assignment.
 
-### 2. Typography
+### style.css
 
-I used Google Fonts to improve the appearance and readability of the application.
+The `style.css` file provides the visual design and responsive layout.
 
-* Poppins is used for headings, labels, buttons, and table headings.
-* Roboto is used for general body text and form content.
+It includes:
 
-This creates a clear visual hierarchy throughout the application.
+* CSS Grid for the overall dashboard layout
+* CSS Grid for the summary and category cards
+* Flexbox for the sidebar navigation
+* Flexbox for the header
+* Flexbox inside each category card
+* CSS custom properties for the theme
+* Responsive design for screens below 768px
+* Hover and keyboard focus animations
+* Dark theme using `prefers-color-scheme: dark`
+* Typography using Google Fonts
 
-### 3. Expense Table Styling
+## CSS Custom Properties
 
-The expense table was improved by adding:
+The theme uses CSS variables inside the `:root` selector.
 
-* Styled table headers
-* Cell padding
-* Borders
-* Alternating row colors
-* Hover effects
-* Consistent typography
-* Rounded corners
-* Proper spacing
+Important variables include:
 
-These changes make the expense information easier to read.
+* `--brand-color`
+* `--accent-color`
+* `--surface-color`
+* `--background-color`
+* `--primary-text`
+* `--secondary-text`
 
-### 4. Add Expense Form Styling
+Using CSS custom properties makes it easier to maintain and change the application's color theme.
 
-The Add Expense form was improved using:
+## Responsive Design
 
-* Consistent input sizes
-* Padding inside inputs
-* Borders
-* Rounded corners
-* Focus effects
-* Styled labels
-* A professional button design
-* Consistent spacing
+The dashboard uses a media query at `768px`.
 
-### 5. CSS Box Model
+On smaller screens:
 
-The CSS Box Model was intentionally used throughout the application.
+* The sidebar and main content become a single-column layout.
+* Navigation items wrap onto multiple lines.
+* Summary cards become one column.
+* Expense cards become one column.
+* Header content stacks vertically.
 
-I used:
+The responsive layout can be tested using the browser's DevTools Device Toolbar.
 
-* `margin` to separate sections
-* `padding` to create internal spacing
-* `border` to define different areas
-* `border-radius` to create modern rounded corners
+## Micro-interactions
 
-The page heading, Add Expense form, and Expense Table are presented as separate visual cards.
+The expense cards include hover and keyboard focus interactions.
 
-### 6. Responsive Design
+When a user hovers over or focuses on a card:
 
-A responsive media query was added so that the Budget Tracker can remain usable on smaller screens such as tablets and mobile devices.
+* The card moves slightly upward.
+* A shadow appears around the card.
+* A visible focus outline appears for keyboard users.
+
+The transition lasts `200ms`, which is within the required maximum of 250ms.
+
+## Dark Theme
+
+The project includes a dark theme using:
+
+`@media (prefers-color-scheme: dark)`
+
+The dark theme changes the CSS custom properties in `:root` rather than creating a completely separate stylesheet.
 
 ## Technologies Used
 
 * HTML5
 * CSS3
+* CSS Grid
+* Flexbox
+* CSS Custom Properties
+* CSS Media Queries
 * Google Fonts
 
-## Project Features
+## How to Run
 
-* Budget and expense tracking interface
-* Add Expense form
-* Expense table
-* Styled form controls
-* Professional color palette
-* Custom typography
-* Responsive layout
-* CSS Box Model
-* Table styling
-* Card-based design
+1. Download or clone the repository.
+2. Open the project folder.
+3. Open `index.html` in a web browser.
+4. Use browser DevTools to test the responsive layout.
 
-## Conclusion
+## Author
 
-This week's work focused on transforming the existing Budget Tracker from a basic HTML interface into a more polished and user-friendly application. The improvements were made using CSS without adding new functionality or creating a new project.
+Bor Tut Both
