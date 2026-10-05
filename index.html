@@ -6,71 +6,208 @@
     <title>SpendWise - Budget Tracker</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header>
-        <h1>SpendWise</h1>
-        <p>Personal Budget & Expense Tracker</p>
-    </header>
+    <div class="app">
 
-    <main class="container">
-        <section class="welcome">
-            <h2>Welcome to SpendWise</h2>
-            <p>Track your budget, expenses, and remaining balance.</p>
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>SpendWise</h2>
 
-            <button onclick="startBudget()">Start Budget Calculation</button>
-        </section>
+            <nav>
+                <a href="#" class="active">Dashboard</a>
+                <a href="#">Expenses</a>
+                <a href="#">Budget</a>
+                <a href="#">Reports</a>
+            </nav>
+        </aside>
 
-        <section class="cards">
-            <div class="card">
-                <h3>Food</h3>
-                <p>Manage your food expenses.</p>
-            </div>
+        <!-- Main Content -->
+        <main class="main-content">
 
-            <div class="card">
-                <h3>Transport</h3>
-                <p>Track your transport spending.</p>
-            </div>
+            <header>
+                <h1>Dashboard</h1>
+                <p>Track your budget and manage your spending.</p>
+            </header>
 
-            <div class="card">
-                <h3>Rent</h3>
-                <p>Keep track of your rent.</p>
-            </div>
+            <!-- Budget Summary -->
+            <section class="cards">
 
-            <div class="card">
-                <h3>Entertainment</h3>
-                <p>Monitor entertainment expenses.</p>
-            </div>
+                <div class="card">
+                    <h3>Total Budget</h3>
+                    <p id="budget-display">KSh 0</p>
+                </div>
 
-            <div class="card">
-                <h3>Savings</h3>
-                <p>Plan and monitor your savings.</p>
-            </div>
+                <div class="card">
+                    <h3>Total Expenses</h3>
+                    <p id="expense-display">KSh 0</p>
+                </div>
 
-            <div class="card">
-                <h3>Utilities</h3>
-                <p>Track your utility expenses.</p>
-            </div>
-        </section>
+                <div class="card">
+                    <h3>Remaining Balance</h3>
+                    <p id="balance-display">KSh 0</p>
+                </div>
 
-        <section class="instructions">
-            <h2>How It Works</h2>
-            <p>
-                Click the button above and enter your monthly budget
-                and total expenses. SpendWise will calculate your
-                remaining balance using JavaScript.
-            </p>
-            <p>
-                Open your browser console using <strong>F12</strong>
-                to view the calculation results.
-            </p>
-        </section>
-    </main>
+            </section>
 
-    <footer>
-        <p>&copy; 2026 SpendWise. All rights reserved.</p>
-    </footer>
+            <!-- Expense Categories -->
+            <section class="expense-section">
 
-    <script src="script.js"></script>
+                <h2>Expense Categories</h2>
+
+                <div class="expense-grid">
+
+                    <div class="expense-card">
+                        <h3>Food</h3>
+                        <p>KSh 0</p>
+                    </div>
+
+                    <div class="expense-card">
+                        <h3>Transport</h3>
+                        <p>KSh 0</p>
+                    </div>
+
+                    <div class="expense-card">
+                        <h3>Rent</h3>
+                        <p>KSh 0</p>
+                    </div>
+
+                    <div class="expense-card">
+                        <h3>Entertainment</h3>
+                        <p>KSh 0</p>
+                    </div>
+
+                    <div class="expense-card">
+                        <h3>Savings</h3>
+                        <p>KSh 0</p>
+                    </div>
+
+                    <div class="expense-card">
+                        <h3>Utilities</h3>
+                        <p>KSh 0</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Start Budget Button -->
+            <button id="start-budget-btn">Enter Budget Information</button>
+
+        </main>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js">// ==========================================
+// SpendWise - JavaScript Foundation
+// ==========================================
+
+// 1. Store Application Data
+
+// Budget variable
+let budget = 0;
+
+// Expense variables
+let food = 0;
+let transport = 0;
+let rent = 0;
+let entertainment = 0;
+let savings = 0;
+let utilities = 0;
+
+// Total expenses
+let totalExpenses = 0;
+
+// Remaining balance
+let remainingBalance = 0;
+
+
+// ==========================================
+// 2. Create Reusable Functions
+// ==========================================
+
+// Function to calculate total expenses
+function calculateTotalExpenses() {
+    return food + transport + rent + entertainment + savings + utilities;
+}
+
+
+// Function to calculate remaining balance
+function calculateBalance(budget, expenses) {
+    return budget - expenses;
+}
+
+
+// Function to display budget results
+function displayResults() {
+
+    // Calculate total expenses
+    totalExpenses = calculateTotalExpenses();
+
+    // Calculate remaining balance
+    remainingBalance = calculateBalance(budget, totalExpenses);
+
+    // Display results in the browser console
+    console.log("========== SpendWise Budget Summary ==========");
+    console.log("Total Budget: KSh " + budget);
+    console.log("Total Expenses: KSh " + totalExpenses);
+    console.log("Remaining Balance: KSh " + remainingBalance);
+    console.log("==============================================");
+
+    // Display results on the webpage
+    document.getElementById("budget-display").textContent =
+        "KSh " + budget.toFixed(2);
+
+    document.getElementById("expense-display").textContent =
+        "KSh " + totalExpenses.toFixed(2);
+
+    document.getElementById("balance-display").textContent =
+        "KSh " + remainingBalance.toFixed(2);
+}
+
+
+// ==========================================
+// 3. Collect User Input
+// ==========================================
+
+function getBudgetInformation() {
+
+    // Ask user for their budget
+    budget = Number(prompt("Enter your total budget in KSh:"));
+
+    // Ask user for expenses
+    food = Number(prompt("Enter your Food expense:"));
+
+    transport = Number(prompt("Enter your Transport expense:"));
+
+    rent = Number(prompt("Enter your Rent expense:"));
+
+    entertainment = Number(
+        prompt("Enter your Entertainment expense:")
+    );
+
+    savings = Number(prompt("Enter your Savings amount:"));
+
+    utilities = Number(prompt("Enter your Utilities expense:"));
+
+    // Display the results
+    displayResults();
+}
+
+
+// ==========================================
+// 4. Connect Button to JavaScript
+// ==========================================
+
+const startButton = document.getElementById("start-budget-btn");
+
+startButton.addEventListener("click", function () {
+
+    getBudgetInformation();
+
+});</script>
+
 </body>
 </html>
